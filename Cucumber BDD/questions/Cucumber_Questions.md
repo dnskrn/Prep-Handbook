@@ -1,59 +1,54 @@
-Questions
-=========
-1. What is Cucumber?
-Cucumber is a testing framework that supports Behavior-Driven Development (BDD). It allows you to write test
-cases in a natural language format, known as Gherkin, which is easily understandable by non-technical
-stakeholders.
+# Questions
 
-2. What are the key components of Cucumber?
-The key components of Cucumber are:
-1. Feature files written in Gherkin syntax
-2. Step definitions written in programming languages such as Java, Ruby, or JavaScript
-3. Runner classes to execute the feature files
-4. Hooks for setup and teardown operations
-5. Tags to organize and run specific scenarios or features
+## 1. What is Cucumber?  
+Cucumber is a testing framework that supports Behavior-Driven Development (BDD). It allows you to write test cases in a natural language format, known as Gherkin, which is easily understandable by non-technical stakeholders.
 
-3. What is Gherkin syntax?
-Gherkin is a business-readable, domain-specific language used to describe the behavior of a software application
-in a structured format. It consists of predefined keywords such as Given, When, Then, And, and But, which help
-in writing scenarios in a human-readable format.
+## 2. What are the key components of Cucumber?  
+The key components of Cucumber are:  
+1. Feature files written in Gherkin syntax  
+2. Step definitions written in programming languages such as Java, Ruby, or JavaScript  
+3. Runner classes to execute the feature files  
+4. Hooks for setup and teardown operations  
+5. Tags to organize and run specific scenarios or features  
 
-4. What are the advantages of using Cucumber for testing?
-Some advantages of using Cucumber for testing include:
-1. Improved collaboration between technical and non-technical stakeholders
-2. Easy-to-understand feature files facilitate clear communication and documentation
-3. Reusability of step definitions across different scenarios
-4. Integration with various programming languages and testing frameworks
-5. Ability to generate reports for test results and coverage analysis
+## 3. What is Gherkin syntax?  
+Gherkin is a business-readable, domain-specific language used to describe the behavior of a software application in a structured format. It consists of predefined keywords such as `Given`, `When`, `Then`, `And`, and `But`, which help in writing scenarios in a human-readable format.
 
-5. How do you write a scenario in a feature file?
-Scenarios in feature files are written using Gherkin syntax. Each scenario typically consists of a title,
-followed by steps using Given, When, Then, And, or But keywords to describe the behavior being tested.
+## 4. What are the advantages of using Cucumber for testing?  
+Some advantages of using Cucumber for testing include:  
+1. Improved collaboration between technical and non-technical stakeholders  
+2. Easy-to-understand feature files facilitate clear communication and documentation  
+3. Reusability of step definitions across different scenarios  
+4. Integration with various programming languages and testing frameworks  
+5. Ability to generate reports for test results and coverage analysis  
 
-6. Explain the concept of tags in Cucumber.
-Tags are annotations used to organize and filter scenarios or features. They can be added to feature files,
-scenarios, or individual steps. Tags are prefixed with the '@' symbol and can be used to mark scenarios for
-different purposes such as smoke testing, regression testing, or to specify the environment.
+## 5. How do you write a scenario in a feature file?  
+Scenarios in feature files are written using Gherkin syntax. Each scenario typically consists of a title, followed by steps using `Given`, `When`, `Then`, `And`, or `But` keywords to describe the behavior being tested.
 
-7. What are step definitions?
-Step definitions are the implementation of the steps described in feature files. They are written in programming
-languages like Java, Ruby, or JavaScript and are responsible for executing the corresponding actions or
-validations when a step is matched during test execution.
+## 6. Explain the concept of tags in Cucumber.  
+Tags are annotations used to organize and filter scenarios or features. They can be added to feature files, scenarios, or individual steps. Tags are prefixed with the `@` symbol and can be used to mark scenarios for different purposes such as smoke testing, regression testing, or to specify the environment.
 
-8. How do you parameterize steps in Cucumber?
-Steps can be parameterized by using placeholders in Gherkin syntax, typically enclosed within angle brackets.
-These placeholders can then be passed as arguments to step definition methods. For example, Given I have
-<number> cucumbers can be matched with @Given("I have {int} cucumbers") in the step definition.
+## 7. What are step definitions?  
+Step definitions are the implementation of the steps described in feature files. They are written in programming languages like Java, Ruby, or JavaScript and are responsible for executing the corresponding actions or validations when a step is matched during test execution.
 
-9. Explain the concept of background in Cucumber.
-Background is a feature in Cucumber that allows you to specify steps that are common to all scenarios in a
-feature file. These steps are executed before each scenario in the feature file, reducing duplication and
-improving readability.
+## 8. How do you parameterize steps in Cucumber?  
+Steps can be parameterized by using placeholders in Gherkin syntax, typically enclosed within angle brackets. These placeholders can then be passed as arguments to step definition methods. For example:  
+```gherkin
+Given I have <number> cucumbers
+```  
+can be matched with:  
+```java
+@Given("I have {int} cucumbers")
+```
 
-10. How do you handle data tables and scenario outlines in Cucumber?
-Data tables and scenario outlines are used for parameterization and data-driven testing in Cucumber. Data
-tables are used to pass tabular data to steps, while scenario outlines allow you to define a scenario template
-that can be executed with different sets of data.
+## 9. Explain the concept of background in Cucumber.  
+Background is a feature in Cucumber that allows you to specify steps that are common to all scenarios in a feature file. These steps are executed before each scenario in the feature file, reducing duplication and improving readability.
+
+## 10. How do you handle data tables and scenario outlines in Cucumber?  
+Data tables and scenario outlines are used for parameterization and data-driven testing in Cucumber.  
+- **Data tables** are used to pass tabular data to steps.  
+- **Scenario outlines** allow you to define a scenario template that can be executed with different sets of data.  
+
 
 11. What are the keywords used in Gherkin syntax?
 Common keywords include:
